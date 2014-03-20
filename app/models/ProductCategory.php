@@ -13,24 +13,8 @@ class ProductCategory extends Eloquent {
 		return HTML::image("oddro/images/product_category/".$this->img, $this->title);
 	}
 
-	/**
-	 * Get the comment's author.
-	 *
-	 * @return User
-	 */
-	// public function author()
-	// {
-	// 	return $this->belongsTo('User', 'user_id');
-	// }
-
-	/**
-	 * Get the comment's post's.
-	 *
-	 * @return Blog\Post
-	 */
-	// public function post()
-	// {
-	// 	return $this->belongsTo('Post');
-	// }
-
+	public function product()
+	{
+		return $this->hasMany('Product');
+	}
 }

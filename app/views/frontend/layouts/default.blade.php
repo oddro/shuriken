@@ -26,6 +26,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href="" rel="stylesheet">
 		<link href="{{ asset('oddro/css/gravira.css') }}" rel="stylesheet">
+		<link href="{{ asset('oddro/js/fancybox/jquery.fancybox.css') }}" rel="stylesheet">
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -56,10 +57,10 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">Sticker</a></li>
-              <li><a href="#contact">Skin</a></li>
-              <li><a href="#contact">Gallery</a></li>
+            	<li {{ (Request::is('/') ? 'class="active"' : '') }}><a href="{{ route('home') }}">Home</a></li>
+				<li {{ (Request::is('sticker') ? 'class="active"' : '') }}><a href="{{ URL::to('sticker') }}">Sticker</a></li>
+				<li {{ (Request::is('skin') ? 'class="active"' : '') }}><a href="{{ URL::to('skin') }}">Skin</a></li>
+				<li {{ (Request::is('gallery') ? 'class="active"' : '') }}><a href="{{ URL::to('gallery') }}">Gallery</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               
@@ -150,6 +151,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="{{ asset('oddro/js/netra.js') }}"></script>
+	<script src="{{ asset('oddro/js/fancybox/jquery.fancybox.pack.js') }}"></script>
 
     <script type="text/javascript">
     window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
