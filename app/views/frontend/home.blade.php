@@ -20,4 +20,21 @@ Contact us ::
           </div>
         </div><!-- /.container -->
       </div>
-@stop
+
+      <div class="container netra-landing">
+        <div class="row common">
+          <h2 class="title" id="shop">Produk Kami</h2>
+          <div class="divider"></div>
+          @foreach ($productCategory as $key => $value)
+            <div class="col-sm-4">
+              <div class="oddro-services custom-shape">
+                {{ $value->img() }}
+                <h3>{{ $value->name }}</h3>
+                <p>{{ $value->description }}</p>
+              </div> <!-- /.service -->
+            </div>
+          @endforeach
+        </div>
+
+      </div>
+@stop 

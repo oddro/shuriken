@@ -17,16 +17,11 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		// Get all the blog posts
-		$posts = Post::with(array(
-			'author' => function($query)
-			{
-				$query->withTrashed();
-			},
-		))->orderBy('created_at', 'DESC')->paginate();
+		// Get all the featured product category
+		$productCategory = ProductCategory::where('featured','=',1)->get();
 
-		// Show the page
-		return View::make('frontend/home', compact('posts'));
+		// Show the homepage
+		return View::make('frontend/home', compact('productCategory'));
 	}
 
 }
