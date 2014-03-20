@@ -10,7 +10,7 @@
 			@show
 		</title>
 		<meta name="keywords" content="your, awesome, keywords, here" />
-		<meta name="author" content="Jon Doe" />
+		<meta name="author" content="Oddro" />
 		<meta name="description" content="Lorem ipsum dolor sit amet, nihil fabulas et sea, nam posse menandri scripserit no, mei." />
 
 		<!-- Mobile Specific Metas
@@ -19,15 +19,13 @@
 
 		<!-- CSS
 		================================================== -->
-		<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-
-		<style>
-		@section('styles')
-		body {
-			padding: 10px 0;
-		}
-		@show
-		</style>
+		<!-- Bootstrap core CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href="" rel="stylesheet">
+		<link href="{{ asset('oddro/css/gravira.css') }}" rel="stylesheet">
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -44,9 +42,38 @@
 	</head>
 
 	<body>
+
+      <div class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Sticker</a></li>
+              <li><a href="#contact">Skin</a></li>
+              <li><a href="#contact">Gallery</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              
+              <li><a href="#"><i class="fa fa-shopping-cart"></i> IDR 88000</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#about">Signup</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
 		<!-- Container -->
 		<div class="container">
-			<!-- Navbar -->
+			<!-- Navbar 
 			<div class="navbar navbar-inverse">
 				<div class="navbar-inner">
 					<div class="container">
@@ -88,25 +115,53 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 
 			<!-- Notifications -->
 			@include('frontend/notifications')
 
 			<!-- Content -->
 			@yield('content')
-
-			<hr />
-
-			<!-- Footer -->
-			<footer>
-				<p>&copy; Company {{ date('Y') }}</p>
-			</footer>
 		</div>
+      <footer class="footer common">
+        <div class="container netra-landing">
+          <div class="col-md-12 feedback"></div>
+          <div class="col-md-6">
+            <ul class="bs-docs-footer-links muted">
+              <li><a href="https://github.com/twbs/bootstrap">About Us</a></li>
+              <li>·</li>
+              <li><a href="../getting-started/#examples">Product Quality</a></li>
+              <li>·</li>
+              <li><a href="../2.3.2/">FAQ</a></li>
+              <li>·</li>
+              <li><a href="../about/">About</a></li>
+              <li>·</li>
+              <li><a href="http://expo.getbootstrap.com">Contact</a></li>
+              <li>·</li>
+              <li><a href="http://blog.getbootstrap.com">Terms</a></li>
+              <li>·</li>
+              <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 copyright">© 2014. Oddro.com. All Rights Reserved</div>
+        </div>
+      </footer>
 
-		<!-- Javascripts
-		================================================== -->
-		<script src="{{ asset('assets/js/jquery.1.10.2.min.js') }}"></script>
-		<script src="{{ asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="{{ asset('oddro/js/netra.js') }}"></script>
+
+    <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+      d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+        $.src='//v2.zopim.com/?1wG4jOOrE8kyD7DN4Idhzau58iQpZMAu';z.t=+new Date;$.
+        type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+
+        </script>
+
 	</body>
 </html>
