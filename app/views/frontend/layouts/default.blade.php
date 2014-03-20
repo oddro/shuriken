@@ -71,8 +71,6 @@
           </div>
         </div>
       </div>
-		<!-- Container -->
-		<div class="container">
 			<!-- Navbar 
 			<div class="navbar navbar-inverse">
 				<div class="navbar-inner">
@@ -122,7 +120,6 @@
 
 			<!-- Content -->
 			@yield('content')
-		</div>
       <footer class="footer common">
         <div class="container netra-landing">
           <div class="col-md-12 feedback"></div>

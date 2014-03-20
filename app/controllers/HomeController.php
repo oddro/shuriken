@@ -26,7 +26,7 @@ class HomeController extends BaseController {
 		))->orderBy('created_at', 'DESC')->paginate();
 
 		// Show the page
-		return View::make('frontend/blog/index', compact('posts'));
+		return View::make('frontend/home', compact('posts'));
 	}
 
 }
