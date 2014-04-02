@@ -107,6 +107,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
+		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
 
 	),
 
@@ -173,7 +174,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Sentry'		  => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
 
 	),
 
